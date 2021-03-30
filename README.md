@@ -3,13 +3,22 @@
 ## Resources
 
 - [Flask](https://flask.palletsprojects.com/en/1.1.x/)
+- [psycopg2](https://pypi.org/project/psycopg2/)
 
 ## Creating routes
 
-### Set up App
+@app.route('/')
+def index():
+return 'Index Page'
 
-`from flask import Flask`
-`app = Flask(__name__)`
+@app.route('/hello')
+def hello_world():
+return 'Hello, World!'
+
+## Set up App
+
+`import Flask`
+`app = flask.Flask(__name__)`
 
 `@app.route('/')`
 `def hello_world():`
